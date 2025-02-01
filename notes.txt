@@ -138,4 +138,51 @@ Now it is recommended to use createRoot method.
 
 
 ________________________________________________________________________________
+LESSON 3 PART 1
 
+React components
+can be function or class
+
+component is like composable in jetpackCompose
+
+so, via components you can do custom html tags!!!
+
+actually components are described like classes, not a functions
+
+class App extends React.Component {
+    helpText = "Help text"
+
+    render() {
+        return (
+            <div className="mydiv">
+                <Header/>
+                <Header/>
+                <Header/>
+                <h1>{this.helpText}</h1>
+                <input placeholder={this.helpText}
+                       onClick={this.inputClick}
+                       onMouseOver={this.mouseOver}/>
+                <p>{this.helpText === "Help text!" ? "Yes" : "No"}</p>
+            </div>
+        )
+    }
+
+    inputClick() {
+        console.log("clicked")
+    }
+    mouseOver() {
+        console.log("mouseOver")
+    }
+}
+
+
+
+actually for components we can make custom attrs - it is called properties
+for custom html tag we can write custom attr with any name (it is called property)
+
+and in other component we can read this property with this.props.%propname%
+
+and properties in props are read-only
+
+
+___________________________________________________________________________________
