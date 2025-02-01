@@ -46,3 +46,37 @@ so, if we want to put many elements in ReactDOM.render, we need to wrap them int
 
 
 ______________________________________________________________________________________
+LESSON 2 part 1
+
+JSX - javaScriptXML - files where we can write html structure inside js code. JSX is copiled
+by babel compiler.
+
+with jsx it is simple to put html code in the page:
+ReactDOM.render(<h1>Hello</h1>, document.getElementById("app));
+
+without jsx technology it could be hard:
+ReactDOM.render(
+	React.createElement("input", {placeholder: "myPlaceholder"}),
+	document.getElementById("app")
+);
+
+in jsx we even can make html element in variable:
+const element = <input placeholder="" />
+
+so, we can use react like jetpack-compose
+inside html put {} and use all the js code you created
+
+const elements = <div>
+    <h1>{helpText}</h1>
+    <input placeholder={helpText}
+           onClick={inputClick}
+           onMouseOver={mouseOver}/>
+    <p>{helpText === "Help text!" ? "Yes" : "No"}</p>
+</div>
+
+Features of jsx:
+1. class is changed to className (because we have keyword class in js)
+2. all html attrs in camel case, for example: onClick, onMouseEnter
+
+
+
