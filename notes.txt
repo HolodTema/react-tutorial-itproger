@@ -1,0 +1,13 @@
+
+React - for single page applications - SPA
+
+before react it was popular to make html document for every page:
+index.html
+contacts.html ...
+React works only with one html file and changes its content
+It is convinient, because there is only one downloading of page - user do not need to reload
+page in every action.
+
+Actually everything what makes react can be made using only JS - but it is slow approach.
+
+
