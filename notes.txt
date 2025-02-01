@@ -79,4 +79,63 @@ Features of jsx:
 2. all html attrs in camel case, for example: onClick, onMouseEnter
 
 
+____________________________________________________________________________________
+Lesson 2 part 2
+
+it is better to connect react to project via server via npm
+npm = node package manager
+nvm = node version manager
+
+firstly it is better to install nvm and using nvm install npm and node
+
+npmjs.com - site where you can find any js lib
+
+npm i react (there must be a joke, that frontenders do not like write words fully :D )
+
+WE HAVE TO WRITE THIS COMMANDS IN DIR OF OUR PROJECT!
+
+after the commands we will have package.json file (like build.gradle)
+
+package-lock.json - also config file, but it is for system, not for you 
+
+dir node_modules - with all the libs in your project
+
+actually we can create project via template - it is better
+
+
+npx - it is also package manager, but it also can do some actions with libs after installing
+npx = NODE PACKAGE EXECUTE
+
+npx create-react-app . - create project in current dir
+
+P.S. ASAP in english = as soon as possibleA
+
+react template project structure:
+node-modules - all the libs in project
+
+package.json - config file
+package-lock.json - config file for system, not for user
+public/ - all files which user can see. 
+src/ - files for programmer
+
+and now it is not enough to just open index.html - we need to launch project through node
+
+in package.json we can see scripts - aliases for project in terminal:
+
+react-scripts - lib for aliases for react project
+
+react-scripts build - to precompile all files for production
+react-scripts start - to launch project
+
+
+npm run build (after this there will be build folder in the project)
+npm run start 
+
+
+actually ReactDOM.render is deprecated now.
+Now it is recommended to use createRoot method.
+
+
+
+________________________________________________________________________________
 
