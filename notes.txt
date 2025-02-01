@@ -1,4 +1,4 @@
-
+#INTRODUCTION LESSON
 React - for single page applications - SPA
 
 before react it was popular to make html document for every page:
@@ -10,4 +10,39 @@ page in every action.
 
 Actually everything what makes react can be made using only JS - but it is slow approach.
 
+__________________________________________________________________________________
+LESSON 1
 
+there are many ways how to include react to project.
+The simpliest approach of connecting react - is connect via link
+
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script
+
+here we connect reactjs and react-dom libs to project. It is better to connect it in head, 
+before body tag processing.
+
+P.S. unpkg.com - CDN (content divilivery network)
+
+babel - compiler for react, which compiles jsx files to js files
+we need to connect compiler babel:
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+babel requires for all js files which are connected to project are with attr
+type="text/babel"
+example:
+<script type="text/babel" src="index.js"></script>
+
+so, steps to connect react via links:
+1. connect react lib in head
+2. connect react-dom lib in head
+3. connect babel lib in head
+4. connect your js file in the end of body with type="text/babel"
+
+method ReactDOM.render( htmlTag, containerId )
+
+can put only one html tag inside container with containerId
+so, if we want to put many elements in ReactDOM.render, we need to wrap them into one div
+
+
+______________________________________________________________________________________
