@@ -186,3 +186,44 @@ and properties in props are read-only
 
 
 ___________________________________________________________________________________
+LESSON 3 PART 2
+
+in react it is good to put every companent to its file
+
+App.js
+Header.js - all these files for components App and Header
+
+How to connect css to react project?
+it is no good to use <link /> to connect css in react
+we need to create directory src/css
+in index.js (where we createRoot) we import this file:
+import './css/main.css'
+
+and all the styles wil be confirmed automatically!
+
+
+How to connect images to react project?
+create dir src/img/
+
+inside component we can write
+import logo from "./img/logo.jpg"
+
+and already in img tag in component render we can use it
+
+_________________________________________________________________________________
+
+
+
+LESSON 4:
+
+how to add states to react component class?
+
+1. in class constructor call super(props)
+
+2. we can use states via this.state
+
+3. to set new value to the state, we need to call this.setState()
+
+4. to make any method compatible with states, we need to write in component's constructor:
+this.methodName = this.methodName.bind(this)
+p.s. we do not have to write this for method render() and other built-in methods
