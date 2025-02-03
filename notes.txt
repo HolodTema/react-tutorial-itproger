@@ -214,7 +214,7 @@ ________________________________________________________________________________
 
 
 
-LESSON 4:
+LESSON 4: states in React (like in Jetpack compose)
 
 how to add states to react component class?
 
@@ -227,3 +227,63 @@ how to add states to react component class?
 4. to make any method compatible with states, we need to write in component's constructor:
 this.methodName = this.methodName.bind(this)
 p.s. we do not have to write this for method render() and other built-in methods
+
+___________________________________________________________________________________
+LESSON 5: webhooks
+
+webhooks - special technology to intercept functions in processes, you cannot control
+you can set automatical actions processing with conditions from results of other
+processes - something like broadcast receiver
+
+example: when we use states in React, we change state and state changes UI in the places,
+where this state is used. So, webhooks is when we change one thing, and this changes another 
+thing. 
+
+Now we look at 2 situations:
+2. One more approach of states in React
+2. Webhook useEffect - run some actions automatically if component fields are changed.
+
+React Components can be classes and functions. It is cool to use functions if we have 
+small components with small UI.
+
+Component as function:
+const Button = (props) => {
+        return (
+            <button>
+                {props.text}
+            </button>
+        )
+}
+
+for component props we can set default value with this code:
+
+MyComponent.defaultProps = {
+	myProp: "default value"
+}
+
+
+In React all webhooks are started with 'use' word
+
+how to use states in components-functions:
+
+1. write in function body:
+const [stateName, funToChangeState] = useState(0); //0 - default state value
+
+2. now funToChangeState will be already ready to use:
+<button onClick={() => funToChangeState(stateName + 1)}>button</button>
+
+
+wehook setEffect:
+	this hook launch some code in case of state changed - it is like Observer in Android!
+
+
+if we use component class, then setEffect is called componentDidUpdate() method
+- this method is called every time when component is updated.
+
+____________________________________________________________________________
+ 
+
+
+
+
+

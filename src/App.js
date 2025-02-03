@@ -17,12 +17,16 @@ class App extends React.Component {
 
     helpText = "Help text"
 
+    componentDidUpdate(prevProp) {
+        if (this.state.helpText !== "Help") {
+            console.log("Some")
+        }
+    }
+
     render() {
         return (
             <div className="mydiv">
                 <Header title="Site header"/>
-                <Header title="lslsl"/>
-                <Header title="alhhahah"/>
                 <h1>{this.state.helpText}</h1>
                 <h2>{this.state.userData}</h2>
                 <input placeholder={this.state.helpText}
